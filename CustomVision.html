@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+  </head>
+
+  <body>
+
+<!--Navigation for normal screens-->
+
+<nav id="navigation">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Custom Vision</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+          </ul>
+        </div>
+      </nav>
+
+<!--Navigation ends-->
+
+
+<div class="container">
+<!-- Page Content goes here -->
+      
+
+
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input type="file" accept="image/*" id="capture" capture="camera"> 
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col s4"></div>
+                <div class="col s4">
+                    <div id="PicturePreview">
+                            <img id="PredictedPicture" src="" alt="" />
+
+                    </div>
+                        
+                </div>
+                <div class="col s4"></div>
+      
+              </div>
+      
+     
+
+<div class="row">
+        <div class="col s4">
+                
+        </div>
+        <div class="col s4">
+            <div class="PredictButton">
+            <button id="button" class="waves-effect waves-light btn-large center-align" type="submit" name="action">Predict
+                 <i class="material-icons right">send</i>
+            </button>
+            </div>
+        </div>
+        <div class="col s4">
+
+        </div>
+
+      </div>
+
+
+    
+      
+
+
+      <div class="row">
+            <div class="col s4"></div>
+            <div class="col s4">
+
+
+                    <table class="centered">
+                            <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Accuracy</th>
+                                  
+                              </tr>
+                            </thead>
+                    
+                            <tbody>
+                              <tr>
+                                <td id="gegenstand"></td>
+                                <td id="result"></td>
+                                
+                              </tr>
+                              <tr>
+                                <td id="gegenstand1"></td>
+                                <td id="result1"></td>
+                                
+                              </tr>
+                              <tr>
+                                <td id="gegenstand2"></td>
+                                <td id="result2"></td>
+                               
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+            </div>
+            <div class="col s4"></div>
+    
+          </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<style>
+#navigation{
+    background-color: #0063b1;
+}
+#PicturePreview{
+    text-align: center;   
+}
+#PredictedPicture{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+.PredictButton{
+    text-align: center;
+}
+.btn, .btn-large, .btn-small{
+    background-color: #0078d7!important;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover{
+    background-color: #0078d7!important;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover{
+    background-color: #0078d7!important;
+}
+.btn, .btn-large, .btn-small{
+    background-color: #0078d7!important;
+}
+input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:not(.browser-default), input.valid[type=text]:not(.browser-default):focus, input.valid[type=password]:not(.browser-default), input.valid[type=password]:not(.browser-default):focus, input.valid[type=email]:not(.browser-default), input.valid[type=email]:not(.browser-default):focus, input.valid[type=url]:not(.browser-default), input.valid[type=url]:not(.browser-default):focus, input.valid[type=time]:not(.browser-default), input.valid[type=time]:not(.browser-default):focus, input.valid[type=date]:not(.browser-default), input.valid[type=date]:not(.browser-default):focus, input.valid[type=datetime]:not(.browser-default), input.valid[type=datetime]:not(.browser-default):focus, input.valid[type=datetime-local]:not(.browser-default), input.valid[type=datetime-local]:not(.browser-default):focus, input.valid[type=tel]:not(.browser-default), input.valid[type=tel]:not(.browser-default):focus, input.valid[type=number]:not(.browser-default), input.valid[type=number]:not(.browser-default):focus, input.valid[type=search]:not(.browser-default), input.valid[type=search]:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown{
+    border-bottom: 1px solid #0078d7!important;
+    -webkit-box-shadow: 0 1px 0 0 #0078d7!important;
+    box-shadow: 0 1px 0 0 #0078d7!important;
+}
+
+</style>
+
+<script>
+
+
+        window.addEventListener("load",function(){
+
+
+
+document.getElementById('capture').onchange = function (evt) {
+    var tgt = evt.target || window.event.srcElement,
+        files = tgt.files;
+
+    // FileReader support
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            document.getElementById('PredictedPicture').src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    }
+
+    // Not supported
+    else {
+        // fallback -- perhaps submit the input to an iframe and temporarily store
+        // them on the server until the user's session ends.
+    }
+}
+
+
+        
+        
+        button.addEventListener("click", function(){
+     
+         const file = document.getElementById('capture').files[0];
+         console.log(file);
+       
+        //HTTP Post Request
+        var URL = "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/7d54452d-a378-4625-a5a0-4b64b763e174/image";
+        var xhr = new XMLHttpRequest();
+        
+        xhr.open('POST', URL, true);
+        xhr.setRequestHeader('Prediction-Key','616f8f5fbe24431cb5948550d5a2ab19');
+        xhr.setRequestHeader('Content-Type','application/octet-stream')
+   
+        
+        xhr.send(file); 
+        
+        
+        xhr.onreadystatechange = processRequest;
+        
+        function processRequest(e){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                //alert(xhr.responseText);
+              
+        
+                console.log(typeof(xhr.responseText));
+                var json = JSON.parse(xhr.responseText);
+                console.log(json);
+                console.log(json.predictions[0]['probability']);
+                console.log(typeof(json));
+                var ergebniss = document.getElementById("result");
+                var gegenstand = document.getElementById("gegenstand");
+                gegenstand.innerHTML = json.predictions[0]['tagName']; 
+                ergebniss.innerHTML = json.predictions[0]['probability']*100;
+
+                var ergebniss = document.getElementById("result1");
+                var gegenstand = document.getElementById("gegenstand1");
+                gegenstand.innerHTML = json.predictions[1]['tagName']; 
+                ergebniss.innerHTML = json.predictions[1]['probability']*100;
+
+                var ergebniss = document.getElementById("result2");
+                var gegenstand = document.getElementById("gegenstand2");
+                gegenstand.innerHTML = json.predictions[2]['tagName']; 
+                ergebniss.innerHTML = json.predictions[2]['probability']*100;
+            }
+        }
+        
+        
+     
+        },false);
+
+        },false);
+
+        </script>
+
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+  </body>
+</html>
