@@ -6,6 +6,19 @@ At the end we can take/upload an image in our Web App to use our Custom Vision M
 [1] <a href="https://customvision.ai/">Custom Vision</a><br>
 [2] <a href="https://azure.microsoft.com/en-us/services/app-service/web/">Azure Web App</a>
 
+### Prerequisites
+<ul style="list-style-type:square;">
+  <li>Azure Subscription</li>
+
+</ul>
+
+### 1. Create Custom Vision Model
+
+
+
+
+
+
 
 
 
