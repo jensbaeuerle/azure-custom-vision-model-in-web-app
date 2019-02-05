@@ -15,7 +15,7 @@ At the end we can take/upload an image in our Web App to use our Custom Vision M
 
 
 
-![](CustomVision.gif)
+![](Resources/CustomVision.gif)
 
 
 
