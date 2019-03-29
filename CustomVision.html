@@ -66,32 +66,32 @@
 
 
         <div class="row">
-                <div class="col l4"></div>
-                <div class="picture col l4 m12">
+                <div class="col l4 xl4"></div>
+                <div class="picture col s12 l4 m12 xl4">
                     <div id="PicturePreview">
                             <img id="PredictedPicture" src="" alt="" />
 
                     </div>
                         
                 </div>
-                <div class="col l4"></div>
+                <div class="col l4 xl4"></div>
       
               </div>
       
      
 
 <div class="row">
-        <div class="col s4">
+        <div class="col l4 xl4">
                 
         </div>
-        <div class="col s4">
+        <div class="button col s12 l4 m12 xl4">
             <div class="PredictButton">
             <button id="button" class="waves-effect waves-light btn-large center-align" type="submit" name="action">Predict
                  <i class="material-icons right">send</i>
             </button>
             </div>
         </div>
-        <div class="col s4">
+        <div class="col l4 xl4">
 
         </div>
 
@@ -103,8 +103,8 @@
 
 
       <div class="row">
-            <div class="col s4"></div>
-            <div class="col s4">
+            <div class="col l4 xl4"></div>
+            <div class="col col s12 l4 m12 xl4">
 
 
                     <table class="centered">
@@ -138,7 +138,7 @@
 
 
             </div>
-            <div class="col s4"></div>
+            <div class="col l4 xl4"></div>
     
           </div>
 
@@ -156,6 +156,11 @@
 #navigation{
     background-color: #0063b1;
 }
+@media only screen and (max-width: 370px){
+    a.brand-logo.center {
+    font-size: 20px;
+}
+}
 #PicturePreview{
     text-align: center;   
 }
@@ -164,8 +169,17 @@
     height: auto;
     object-fit: cover;
 }
-.picture .m12{
+.picture.col.m12 {
     float: none;
+}
+.picture.col.l4 {
+    float: left;
+}
+.button.col.m12 {
+    float: none;
+}
+.button.col.l4 {
+    float: left;
 }
 .PredictButton{
     text-align: center;
