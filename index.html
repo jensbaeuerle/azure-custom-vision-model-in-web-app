@@ -107,7 +107,7 @@
             <div class="col col s12 l4 m12 xl4">
 
 
-                    <table class="centered">
+                    <table class="centered" id="myTable">
                             <thead>
                               <tr>
                                   <th>Name</th>
@@ -117,21 +117,7 @@
                             </thead>
                     
                             <tbody>
-                              <tr>
-                                <td id="gegenstand"></td>
-                                <td id="result"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td id="gegenstand1"></td>
-                                <td id="result1"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td id="gegenstand2"></td>
-                                <td id="result2"></td>
-                               
-                              </tr>
+
                             </tbody>
                           </table>
 
@@ -141,6 +127,7 @@
             <div class="col l4 xl4"></div>
     
           </div>
+
 
 
 
@@ -201,7 +188,9 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     -webkit-box-shadow: 0 1px 0 0 #0078d7!important;
     box-shadow: 0 1px 0 0 #0078d7!important;
 }
-
+td{
+  text-align: center;
+}
 </style>
 
 <script>
@@ -240,11 +229,11 @@ document.getElementById('capture').onchange = function (evt) {
          console.log(file);
        
         //HTTP Post Request
-        var URL = "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/7d54452d-a378-4625-a5a0-4b64b763e174/image";
+        var URL = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/c9b44a5e-ab2b-4318-8cb9-faafce9aeebd/classify/iterations/Iteration6/image";
         var xhr = new XMLHttpRequest();
         
         xhr.open('POST', URL, true);
-        xhr.setRequestHeader('Prediction-Key','!!!Please insert here your Predection-Key!!!');
+        xhr.setRequestHeader('Prediction-Key','a6161e29140945db9fdb8a3ae3a9521f');
         xhr.setRequestHeader('Content-Type','application/octet-stream')
    
         
@@ -256,32 +245,32 @@ document.getElementById('capture').onchange = function (evt) {
         function processRequest(e){
             if(xhr.readyState == 4 && xhr.status == 200){
                 //alert(xhr.responseText);
-              
-        
                 console.log(typeof(xhr.responseText));
                 var json = JSON.parse(xhr.responseText);
                 console.log(json);
                 console.log(json.predictions[0]['probability']);
-                console.log(typeof(json));
-                var ergebniss = document.getElementById("result");
-                var gegenstand = document.getElementById("gegenstand");
-                gegenstand.innerHTML = json.predictions[0]['tagName']; 
-                ergebniss.innerHTML = json.predictions[0]['probability']*100;
+                console.log(typeof(json));  
+                  
+                var table = document.getElementById("myTable");
 
-                var ergebniss = document.getElementById("result1");
-                var gegenstand = document.getElementById("gegenstand1");
-                gegenstand.innerHTML = json.predictions[1]['tagName']; 
-                ergebniss.innerHTML = json.predictions[1]['probability']*100;
+                for(var i = json.predictions.length -1 ; i >= 0 ; i--){
 
-                var ergebniss = document.getElementById("result2");
-                var gegenstand = document.getElementById("gegenstand2");
-                gegenstand.innerHTML = json.predictions[2]['tagName']; 
-                ergebniss.innerHTML = json.predictions[2]['probability']*100;
+
+                var row = table.insertRow(1);
+
+
+                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                // Add some text to the new cells:
+                cell1.innerHTML = json.predictions[i]['tagName'];
+                cell2.innerHTML = json.predictions[i]['probability'] * 100 + '%';
+
+
+                }
             }
         }
-        
-        
-     
         },false);
 
         },false);
