@@ -83,6 +83,20 @@ Open the "index.html" file and insert the "Prediction URL" and the "Prediction K
 
 ![](Resources/images/Step8.png)
 
+### 5. Make predictions
+
+#### Make predictions with a local file
+
+Go to your Web App, select an image and click the "Prediction" button. Or use your Phone to select an image with your camera.
+
+![](Resources/images/Step10.png)
+![](Resources/images/Step11.png)
+![](Resources/images/Step12.png)
+
+
+#### Make predictions with an image from your camera
+![](Resources/iPhone.gif)
+
 
 
 
