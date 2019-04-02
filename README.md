@@ -77,11 +77,11 @@ Copy the link in the GitHub Repository and follow the steps in the video below.
 You will get these two infromation from the <a href="https://www.customvision.ai">Custom Vision Portal.</a><br>
 Go to the "App Service Editor (Preview)" and click "Go".
 
-![](Resources/images/Step9.png)
+![](Resources/images/Step9.PNG)
 
 Open the "index.html" file and insert the "Prediction URL" and the "Prediction Keys". (Line 231 - 240)
 
-![](Resources/images/Step8.png)
+![](Resources/images/Step8.PNG)
 
 ### 5. Make predictions
 
@@ -89,9 +89,9 @@ Open the "index.html" file and insert the "Prediction URL" and the "Prediction K
 
 Go to your Web App, select an image and click the "Prediction" button. Or use your Phone to select an image with your camera.
 
-![](Resources/images/Step10.png)
-![](Resources/images/Step11.png)
-![](Resources/images/Step12.png)
+![](Resources/images/Step10.PNG)
+![](Resources/images/Step11.PNG)
+![](Resources/images/Step12.PNG)
 
 
 #### Make predictions with an image from your camera
