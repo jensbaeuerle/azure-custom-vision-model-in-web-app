@@ -79,7 +79,7 @@ Go to the "App Service Editor (Preview)" and click "Go".
 
 ![](Resources/images/Step9.PNG)
 
-Open the "index.html" file and insert the "Prediction URL" and the "Prediction Keys". (Line 231 - 240)
+Open the "script.js" file and insert the "Prediction URL" and the "Prediction Keys".
 
 ![](Resources/images/Step8.PNG)
 
