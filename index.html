@@ -229,11 +229,11 @@ document.getElementById('capture').onchange = function (evt) {
          console.log(file);
        
         //HTTP Post Request
-        var URL = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/c9b44a5e-ab2b-4318-8cb9-faafce9aeebd/classify/iterations/Iteration6/image";
+        var URL = "< Insert Prediction URL >";
         var xhr = new XMLHttpRequest();
         
         xhr.open('POST', URL, true);
-        xhr.setRequestHeader('Prediction-Key','<Prediction Keys>');
+        xhr.setRequestHeader('Prediction-Key','< Prediction Keys >');
         xhr.setRequestHeader('Content-Type','application/octet-stream')
    
         
