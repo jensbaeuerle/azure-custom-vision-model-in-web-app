@@ -94,7 +94,7 @@ Go to your Web App, select an image and click the "Prediction" button. Or use yo
 ![](Resources/images/Step12.PNG)
 
 
-#### Make predictions with an image from your mobile camera
+#### Make predictions with an image from your camera
 ![](Resources/iPhone.gif)
 
 
