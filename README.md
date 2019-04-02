@@ -92,6 +92,7 @@ Go to your Web App, select an image and click the "Prediction" button. Or use yo
 ![](Resources/images/Step10.png)
 ![](Resources/images/Step11.png)
 ![](Resources/images/Step12.png)
+![](Resources/images/Step12.png)
 
 
 #### Make predictions with an image from your camera
