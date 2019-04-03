@@ -58,7 +58,7 @@ After that click "Create" to finish your creation. By clicking the bell on the t
 
 ![](Resources/images/Step6.png)
 
-You will receive notification if the deployement is succeeded!
+You will receive a notification if the deployement is succeeded!
 
 ![](Resources/images/Step7.png)
 
